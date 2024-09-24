@@ -15,6 +15,8 @@ npm install
 This will add the node_modules and package-lock.json
 
 ## Run Project
+```
 npm run dev
+```
 ctrl+click to open project in browser
 

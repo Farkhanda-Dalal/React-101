@@ -31,3 +31,15 @@ content: [
 ```
 npm run dev
 ```
+
+## Adding custom Tailwind classes:
+Step 1: Go to App.css and add the custom css
+```
+.<new_class>{
+@apply <property1 property2 ........>
+}
+```
+Step 2: Import App.css into App.jsx
+```
+import './App.css';
+```

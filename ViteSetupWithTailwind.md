@@ -8,6 +8,8 @@ npm run dev
 ## Install Tailwind CSS
 ```
 npm install -D tailwindcss postcss autoprefixer
+```
+```
 npx tailwindcss init -p
 ```
 This should generate tailwind.config.js and postcss.config.js files.

@@ -1,0 +1,12 @@
+body{
+  @apply m-0 p-0 min-h-screen flex justify-center items-center min-h-screen
+
+}
+
+.input-style{
+  @apply bg-white h-10 rounded-md border-2 border-black ;
+}
+
+.button{
+  @apply bg-white col-span-2 h-10 border-2 border-black rounded-md;
+}

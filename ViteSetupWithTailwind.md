@@ -1,7 +1,13 @@
 ## Create React Vite Project
 ```
 npm create vite@latest
+```
+
+```
 npm install
+```
+
+```
 npm run dev
 ```
 
@@ -22,7 +28,7 @@ content: [
   ],
 ```
 
-##Add tailwind to ./src/index.css
+## Add tailwind to ./src/index.css
 ```
 @tailwind base;
 @tailwind components;

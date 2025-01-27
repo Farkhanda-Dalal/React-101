@@ -4,6 +4,28 @@ In the given React code, the `map()` method is used to iterate over the `food` a
 
 ---
 
+# Code:
+
+```
+import React, { Fragment } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+const App = () => {
+  let food=["apple", "egg", "chicken"]
+  return (
+    <Fragment>
+      <ul class="list-group">
+        {food.map((item)=>(
+        <li class="list-group-item">{item}</li>
+        ))}
+      </ul>
+    </Fragment>
+  )
+}
+
+export default App;
+
+```
 ## Step 1: Understanding the `map()` Syntax
 
 The `map()` method is used on arrays in JavaScript to create a **new array** by applying a function to each element of the original array. Its basic syntax is:

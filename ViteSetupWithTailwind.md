@@ -1,3 +1,23 @@
+## New Tailwind Set Up
+```
+npm install tailwindcss @tailwindcss/vite
+```
+
+Remove all code from vite.config.js and Copy Paste this:
+```
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+// https://vite.dev/config/
+
+export default defineConfig({
+  plugins: [react(),
+    tailwindcss()
+  ],
+})
+
+```
+
 ## Create React Vite Project
 ```
 npm create vite@latest

@@ -6,29 +6,36 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
   let food=["apple", "egg", "chicken"]
+
+  // let food=[]
+  let emptyMessage=food.length===0? <h1>I am Hungry</h1>: null
   
   return (
     <Fragment>
       <h1>Healthy shit</h1>
+
       {/* Ternary with one JSX ele */}
-      {food.length===0? <h1>I am Hungry</h1>: null}
+      {emptyMessage} 
       <ul className="list-group">
+
         {/* Ternary with multiple JSX ele */}
         {food.map((item)=>(
           <Fragment>
             {
-              item==="egg"? (<li>Egg is smelly</li>): 
-              item==="apple" ? (<li>Apple a day keeps the doc away</li>) :
+              item==="egg"? (<li key={item} className="list-group-item">Egg is smelly</li>): 
+              item==="apple" ? (<li key={item} className="list-group-item">Apple a day keeps the doc away</li>) :
               (<li key={item} className="list-group-item">{item} </li>)
             }
           </Fragment>
         ))}
+
       </ul>
     </Fragment>
   ) 
 }
 
 export default App;
+
 ```
 
 # Explanation of Ternary Conditional Rendering in the Code

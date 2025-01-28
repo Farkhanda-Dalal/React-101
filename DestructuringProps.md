@@ -122,6 +122,31 @@ Usage: After renaming, you would use food in the rest of the code instead of foo
 ```
 let message = food.length === 0 && <h1>I'm actually Hungry</h1>;
 ```
+---
+## 5. Destructuring in function arguement:
+Instead of removing the foodList from props into a variable it can be directly be destructured in the function arguement itself.
+```
+const EmptyMessage =({foodList})=>{
+    let message= foodList.length===0 && <h1>Im actually Hungry</h1>
 
+    return <>
+    {message}
+    </>
+}
+export default EmptyMessage
+```
+---
+## 6. Renaming while Destructuring in function arguement:
+Here, foodList is renamed to food in the function arguement itself
+```
+const EmptyMessage =({foodList:food})=>{
+    let message= food.length===0 && <h1>Im actually Hungry</h1>
+
+    return <>
+    {message}
+    </>
+}
+export default EmptyMessage
+```
 
 

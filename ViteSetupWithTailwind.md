@@ -18,20 +18,12 @@ export default defineConfig({
 
 ```
 
-## Create React Vite Project
+Add this App.css file:
 ```
-npm create vite@latest
-```
-
-```
-npm install
+@import "tailwindcss";
 ```
 
-```
-npm run dev
-```
-
-## Install Tailwind CSS
+## Previous Tailwind CSS Installation
 ```
 npm install -D tailwindcss postcss autoprefixer
 ```

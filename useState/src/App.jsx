@@ -1,40 +1,24 @@
-import React, { Fragment, useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import FoodList from './components/FoodList'
-import EmptyMessage from './components/EmptyMessage'
-import Input from './components/Input'
-import "./App.css"
+import React, { useState } from 'react'
+import './App.css'
 
 const App = () => {
-  const [food, setFood]=useState(["apple", "egg", "chicken", 'MEAT'])
-  let textState=useState()
-  let curr=textState[0]
-  let set=textState[1]
+  let [currCount, setCount]=useState(0)
 
-  function handle(event){
-    set(event.target.value)
-    console.log(curr)
+  function handle(){
+    setCount(currCount+1)
+    console.log(currCount)
   }
-  
-  const handleOnSubmit = () => {
-    console.log(curr)
-    //if u want to add same name items den remove this if statement
-    if (curr && !food.includes(curr)) {
-      setFood((blah) => [...blah, curr]); // Use spread operator to avoid mutating state
-      console.log(food); // food will still be outdated here due to state update being asynchronous
-    }
-  };
-  // let food=[]
- 
   return (
-    <Fragment>
-      <h1 className='trial'>Healthy Food</h1>
-      <Input handleOnChange={handle} handleSubmit={handleOnSubmit}></Input>
-      <div>{curr}</div>
-      <EmptyMessage food={food}></EmptyMessage>
-      <FoodList List={food}></FoodList>
-    </Fragment>
-  ) 
+    <div className='flex flex-col h-screen w-screen justify-evenly items-center'>
+      <div className='flex gap-14 justify-evenly items-center '>
+        {currCount}
+        <button className='text-pink-400 border-1 border-black p-2 rounded-md'
+        onClick={handle}
+        >Increment</button>
+      </div>
+      <h1>Count : {currCount}</h1>
+    </div>
+  )
 }
 
-export default App;
+export default App

@@ -1,5 +1,8 @@
 ## New Tailwind Set Up
 ```
+npm create vite@latest
+```
+```
 npm install tailwindcss @tailwindcss/vite
 ```
 
@@ -18,7 +21,7 @@ export default defineConfig({
 
 ```
 
-Add this App.css file:
+Add this in index.css file:
 ```
 @import "tailwindcss";
 ```
